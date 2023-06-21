@@ -1,0 +1,103 @@
+
+
+<div class="creations">
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-deep-earth.jpg">
+      <img src="/images/mobile/image-deep-earth.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title deep-earth">Deep earth</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-night-arcade.jpg">
+      <img src="/images/mobile/image-night-arcade.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">Night arcade</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-soccer-team.jpg">
+      <img src="/images/mobile/image-soccer-team.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">Soccer team VR</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-grid.jpg">
+      <img src="/images/mobile/image-grid.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">The grid</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-from-above.jpg">
+      <img src="/images/mobile/image-from-above.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">From up above VR</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-pocket-borealis.jpg">
+      <img src="/images/mobile/image-pocket-borealis.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">Pocket borealis</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-curiosity.jpg">
+      <img src="/images/mobile/image-curiosity.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">The curiosity</h2>
+  </article>
+  <article class="creation">
+    <picture>
+      <source media="(width >= 768px)" 
+      srcset="/images/desktop/image-fisheye.jpg">
+      <img src="/images/mobile/image-fisheye.jpg" alt="">
+    </picture>
+    
+    <h2 class="creation__title">Make it fisheye</h2>
+  </article>
+  <button class="see-all-bttn">See all</button>
+</div>
+
+<style>
+  .creation {
+    position: relative;
+    padding: 1.5rem;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .creation:is(:hover) {
+    opacity: 0.7;
+    scale: 1.05;
+    transition: opacity, scale .5s ease;
+  }
+
+  .creation__title {
+    color: white;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+    z-index: 99;
+
+    width: 9rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+</style>
