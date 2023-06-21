@@ -1,81 +1,126 @@
----
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
----
+<!-- ---
+import ""
+--- -->
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+   <header>
+    <div class="header-container">
+      <img src="./images/logo.svg" alt="">
+      <button class="nav-button">
+        <span class="line one"></span>
+        <span class="line two"></span>
+        <span class="line three"></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li>Careers</li>
+          <li><a href="#events">Events</a></li>
+          <li>Products</li>
+          <li>Support</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+   
+  <main>
+    
+    
+    <section id="home">
+      <picture>
+        <source srcset="./images/desktop/image-hero.jpg" media="(width >= 768px)">
+        <img src="./images/mobile/image-hero.jpg" alt="">
+      </picture>
+      <div class="absolute-content">
+        <h1>Immersive experiences that deliver</h1>
+      </div>
+      
+    </section>
+    <article id="about">
+      <picture>
+        <source src="./images/desktop/image-interactive.jpg" media="(width >= 768px)">
+      </picture>
+      <section class="about__content">
+        <h1>The leader in interactive VR</h1>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </section>
+    </article>
+    <section id="events">
+      <h1 class="event__heading">Our creations</h1>
+      <div class="creations">
+        <article class="creation">
+          <h2 class="creation__title">Deep earth</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">Night arcade</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">Soccer team VR</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">The grid</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">From up above VR</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">Pocket borealis</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">The curiosity</h2>
+        </article>
+        <article class="creation">
+          <h2 class="creation__title">Make it fisheye</h2>
+        </article>
+        <button class="see-all-bttn">See all</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <img src="./images/logo.svg" alt="">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li>Careers</li>
+      <li><a href="#events">Events</a></li>
+      <li>Products</li>
+      <li>Support</li>
+    </ul>
+    <div class="social-icons">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+    <p class="footer__rights">© 2021 Loopstudios. All rights reserved.</p>
+  </footer>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
