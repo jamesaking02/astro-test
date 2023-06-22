@@ -2,10 +2,23 @@
   const navBttn = document.querySelector(".nav-button")
   navBttn.addEventListener('click', () => {
     const navBttnLines = document.querySelectorAll(".line")
+    const nav = document.querySelector("nav")
     navBttnLines.forEach((line) => {
       line.classList.toggle("active")
     })
+
+    nav.classList.toggle("active")
+    document.querySelector("body").classList.toggle("active")
+
+    //animate nav items when menu animation is done
+    nav.addEventListener('transitionrun', () => {
+      document.querySelector("ul").classList.add("animated")
+    })
+    document.querySelector("ul").classList.remove("animated")
   })
+
+  
+  
 </script>
 
 <button class="nav-button">
@@ -23,9 +36,12 @@
   gap: .3rem;
 
   cursor: pointer;
-  
+  transition: opacity .2s ease;
 }
 
+.nav-button:hover {
+  opacity: .75;
+}
 
 .line {
   width: 100%;
