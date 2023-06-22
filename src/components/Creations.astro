@@ -1,7 +1,7 @@
 
 
 <event-heading>
-  <h1 class="event__heading">Our creations</h1>
+  <h1 class="event__heading" id="events">Our creations</h1>
 </event-heading>
 <div class="creations">
   <article class="creation">
@@ -79,21 +79,21 @@
 </div>
 
 <script>
-  const cards = document.querySelectorAll(".creation")
-  cards.forEach((card) => {
-    const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animated")
-        return
-      }
-      entry.target.classList.remove("animated")
-    })
+  // const cards = document.querySelectorAll(".creation")
+  // cards.forEach((card) => {
+  //   const observer = new IntersectionObserver(entries => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add("animated")
+  //       return
+  //     }
+  //     entry.target.classList.remove("animated")
+  //   })
     
-  }, {threshold: 0.2})
-      observer.observe(card)
-      console.log(observer)
-    })
+  // }, {threshold: 0.2})
+  //     observer.observe(card)
+  //     console.log(observer)
+  //   })
   
   
 </script>
@@ -144,7 +144,7 @@
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;
-    z-index: 99;
+    /* z-index: 99; */
 
     width: fit-content;
     font-size: clamp(1.5rem, 2.2vw, 2.5rem);
