@@ -1,5 +1,5 @@
 ---
-import "./src/styles/main.css"
+import "../styles/main.css"
 import NavButton from "../components/NavButton.astro"
 import Creations from "../components/Creations.astro"
 ---
@@ -11,9 +11,9 @@ import Creations from "../components/Creations.astro"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../public/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/main/images/favicon-32x32.png">
   <title>Frontend Mentor | Loopstudios landing page</title>
-
+  <!-- <link rel="stylesheet" href="/main/src/styles/main.css"> -->
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -23,15 +23,34 @@ import Creations from "../components/Creations.astro"
 <body>
    <header>
     <div class="header-container">
-      <img src="./images/logo.svg" alt="">
+      <a href="#home"><img src="/main/images/logo.svg" alt="" class="logo"></a>
       <NavButton />
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li>Careers</li>
-          <li><a href="#events">Events</a></li>
-          <li>Products</li>
-          <li>Support</li>
+          <div>
+            <li><a href="#about">About</a></li>
+            <hr>
+          </div>
+
+          <div>
+            <li>Careers</li>
+            <hr>
+          </div>
+
+          <div>
+            <li><a href="#events">Events</a></li>
+            <hr>
+          </div>
+          
+          <div>
+            <li>Products</li>
+            <hr>
+          </div>
+  
+          <div>
+            <li>Support</li>
+            <hr>
+          </div>
         </ul>
       </nav>
     </div>
@@ -42,8 +61,8 @@ import Creations from "../components/Creations.astro"
     
     <section id="home">
       <picture>
-        <source srcset="./images/desktop/image-hero.jpg" media="(width >= 768px)">
-        <img src="./images/mobile/image-hero.jpg" alt="">
+        <source srcset="/main/images/desktop/image-hero.jpg" media="(width >= 768px)">
+        <img src="/main/images/mobile/image-hero.jpg" alt="">
       </picture>
       <div class="absolute-content">
         <h1>Immersive experiences that deliver</h1>
@@ -52,14 +71,11 @@ import Creations from "../components/Creations.astro"
     </section>
     <article id="about">
       <picture>
-        <source src="./images/desktop/image-interactive.jpg" media="(width >= 768px)">
+        <source media="(width >= 768px)" 
+        srcset="/main/images/desktop/image-interactive.jpg">
+        <img src="/main/images/mobile/image-interactive.jpg" alt="">
       </picture>
       <section class="about__content">
-        <picture>
-          <source media="(width >= 768px)" 
-          srcset="../../public/images/desktop/image-interactive.jpg">
-          <img src="../../public/images/mobile/image-interactive.jpg" alt="">
-        </picture>
         <h1>The leader in interactive VR</h1>
         <p>
           Founded in 2011, Loopstudios has been producing world-class virtual reality 
@@ -70,12 +86,12 @@ import Creations from "../components/Creations.astro"
       </section>
     </article>
     <section id="events">
-      <h1 class="event__heading">Our creations</h1>
+      
       <Creations />
     </section>
   </main>
   <footer>
-    <img src="./images/logo.svg" alt="">
+    <a href="#home"><img src="/main/images/logo.svg" alt="" class="logo"></a>
     <ul>
       <li><a href="#about">About</a></li>
       <li>Careers</li>
@@ -98,4 +114,5 @@ import Creations from "../components/Creations.astro"
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+<script src="/src/js/script.js"></script>
 </html>
