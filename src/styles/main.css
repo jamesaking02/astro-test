@@ -71,6 +71,13 @@ picture > img {
   z-index: 2;
 }
 
+.header-container.active {
+  position: fixed;
+  background-color: var(--very-dark-gray);
+  padding-block: 1rem;
+  transition: background-color 1s ease;
+}
+
 nav {
   display: none;
 }
@@ -87,7 +94,7 @@ nav {
 }
 
 #home > .absolute-content > h1 {
-  font-size: clamp(2.3rem, 7vw, 3rem);
+  font-size: clamp(2.3rem, 7vw, 4.5rem);
   color: var(--white);
   transition: font-size 0s ease-in-out;
   word-spacing: .2rem;
@@ -110,6 +117,53 @@ nav {
 }
 
 @media screen and (width >= 768px) {
+  .logo {
+    width: 16rem;
+  }
+
+  .header-container {
+    padding: 6rem 12rem;
+  }
+
+  button.nav-button {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1.3rem;
+    color: white;
+  }
+
+  ul > div > li {
+    cursor: pointer;
+  }
+
+  ul > div > li > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  ul > div:hover > hr {
+    scale: 1;
+  } 
+
+  hr {
+    margin: .5rem auto;
+    height: 4px;
+    width: 3rem;
+    scale: 0;
+    background-color: white;
+    transition: scale .5s ease;
+  }
+
   #about,
   div.creations {
     padding-inline: 16rem;
@@ -117,7 +171,8 @@ nav {
 
   #home > .absolute-content {
     max-width: 45rem;
-
+    top: 18rem;
+    left: 8rem;
   }
 
   .creation > .creation__title {
