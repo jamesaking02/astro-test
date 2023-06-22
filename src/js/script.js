@@ -1,3 +1,5 @@
+
+// Make headings fade in when scrolled into view
 const h1 = document.querySelectorAll("h1")
 h1.forEach((heading) => {
   const observer = new IntersectionObserver(entries => {
