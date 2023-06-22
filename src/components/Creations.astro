@@ -1,11 +1,14 @@
 
 
+<event-heading>
+  <h1 class="event__heading">Our creations</h1>
+</event-heading>
 <div class="creations">
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-deep-earth.jpg">
-      <img src="/images/mobile/image-deep-earth.jpg" alt="">
+      srcset="/main/images/desktop/image-deep-earth.jpg">
+      <img src="/main/images/mobile/image-deep-earth.jpg" alt="">
     </picture>
     
     <h2 class="creation__title deep-earth">Deep earth</h2>
@@ -13,8 +16,8 @@
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-night-arcade.jpg">
-      <img src="/images/mobile/image-night-arcade.jpg" alt="">
+      srcset="/main/images/desktop/image-night-arcade.jpg">
+      <img src="/main/images/mobile/image-night-arcade.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">Night arcade</h2>
@@ -22,26 +25,25 @@
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-soccer-team.jpg">
-      <img src="/images/mobile/image-soccer-team.jpg" alt="">
+      srcset="/main/images/desktop/image-soccer-team.jpg">
+      <img src="/main/images/mobile/image-soccer-team.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">Soccer team VR</h2>
   </article>
-  <article class="creation">
+  <article class="creation the-grid">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-grid.jpg">
-      <img src="/images/mobile/image-grid.jpg" alt="">
+      srcset="/main/images/desktop/image-grid.jpg">
+      <img src="/main/images/mobile/image-grid.jpg" alt="">
     </picture>
-    
     <h2 class="creation__title">The grid</h2>
   </article>
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-from-above.jpg">
-      <img src="/images/mobile/image-from-above.jpg" alt="">
+      srcset="/main/images/desktop/image-from-above.jpg">
+      <img src="/main/images/mobile/image-from-above.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">From up above VR</h2>
@@ -49,8 +51,8 @@
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-pocket-borealis.jpg">
-      <img src="/images/mobile/image-pocket-borealis.jpg" alt="">
+      srcset="/main/images/desktop/image-pocket-borealis.jpg">
+      <img src="/main/images/mobile/image-pocket-borealis.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">Pocket borealis</h2>
@@ -58,8 +60,8 @@
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-curiosity.jpg">
-      <img src="/images/mobile/image-curiosity.jpg" alt="">
+      srcset="/main/images/desktop/image-curiosity.jpg">
+      <img src="/main/images/mobile/image-curiosity.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">The curiosity</h2>
@@ -67,8 +69,8 @@
   <article class="creation">
     <picture>
       <source media="(width >= 768px)" 
-      srcset="/images/desktop/image-fisheye.jpg">
-      <img src="/images/mobile/image-fisheye.jpg" alt="">
+      srcset="/main/images/desktop/image-fisheye.jpg">
+      <img src="/main/images/mobile/image-fisheye.jpg" alt="">
     </picture>
     
     <h2 class="creation__title">Make it fisheye</h2>
@@ -76,28 +78,83 @@
   <button class="see-all-bttn">See all</button>
 </div>
 
+<script>
+  const cards = document.querySelectorAll(".creation")
+  cards.forEach((card) => {
+    const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animated")
+        return
+      }
+      entry.target.classList.remove("animated")
+    })
+    
+  }, {threshold: 0.2})
+      observer.observe(card)
+      console.log(observer)
+    })
+  
+  
+</script>
+
+
 <style>
+  .event__heading {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    margin-bottom: 3rem;
+  }
+
+  .creations {
+    padding-inline: 1.5rem;
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    gap: 1rem;
+    overflow: hidden;
+  }
+
   .creation {
     position: relative;
-    padding: 1.5rem;
+    /* padding: 0 1.5rem 1.5rem; */
     cursor: pointer;
-    width: fit-content;
+    transition: scale .5s ease-in-out;
+    background-color: black;
+    
+  }
+
+  .creation > picture > img {
+    width: 100%;
+    transition: opacity .5s ease-in-out;
+    
   }
 
   .creation:is(:hover) {
-    opacity: 0.7;
     scale: 1.05;
-    transition: opacity, scale .5s ease;
+    
+  }
+
+  .creation:is(:hover) > picture > img {
+    opacity: .75;
   }
 
   .creation__title {
     color: white;
     position: absolute;
-    bottom: 2.5rem;
-    left: 2.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
     z-index: 99;
 
-    width: 9rem;
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    width: fit-content;
+    font-size: clamp(1.5rem, 2.2vw, 2.5rem);
+    text-shadow: 5px 5px 5px black;
+    
+  }
+
+  
+
+  @media screen and (width >= 768px) {
+    
   }
 </style>
