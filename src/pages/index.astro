@@ -85,26 +85,85 @@ import Creations from "../components/Creations.astro"
         </p>
       </section>
     </article>
-    <section>
+    <section id="events">
       <Creations />
     </section>
+    <button class="see-all-bttn--mobile see-all-bttn ">See all</button>
   </main>
   <footer>
-    <a href="#home"><img src="/main/images/logo.svg" alt="" class="logo"></a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li>Careers</li>
-      <li><a href="#events">Events</a></li>
-      <li>Products</li>
-      <li>Support</li>
-    </ul>
-    <div class="social-icons">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+    <div class="footer__container">
+      <a href="#home">
+        <img src="/main/images/logo.svg" alt="" class="footer__logo logo">
+      </a>
+      <div class="social-icons--desktop social-icons">
+        <img src="/main/images/icon-facebook.svg" alt="">
+        <img src="/main/images/icon-twitter.svg" alt="">
+        <img src="/main/images/icon-pinterest.svg" alt="">
+        <img src="/main/images/icon-instagram.svg" alt="">
+      </div>
     </div>
-    <p class="footer__rights">© 2021 Loopstudios. All rights reserved.</p>
+    <ul class="footer__nav--mobile footer__nav ">
+      <div>
+        <li><a href="#about">About</a></li>
+        <hr>
+      </div>
+
+      <div>
+        <li>Careers</li>
+        <hr>
+      </div>
+
+      <div>
+        <li><a href="#events">Events</a></li>
+        <hr>
+      </div>
+      
+      <div>
+        <li>Products</li>
+        <hr>
+      </div>
+
+      <div>
+        <li>Support</li>
+        <hr>
+      </div>
+    </ul>
+    <div class="social-icons--mobile social-icons">
+      <img src="/main/images/icon-facebook.svg" alt="">
+      <img src="/main/images/icon-twitter.svg" alt="">
+      <img src="/main/images/icon-pinterest.svg" alt="">
+      <img src="/main/images/icon-instagram.svg" alt="">
+    </div>
+    <div class="footer__container">
+      <ul class="footer__nav--desktop footer__nav ">
+        <div>
+          <li><a href="#about">About</a></li>
+          <hr>
+        </div>
+  
+        <div>
+          <li>Careers</li>
+          <hr>
+        </div>
+  
+        <div>
+          <li><a href="#events">Events</a></li>
+          <hr>
+        </div>
+        
+        <div>
+          <li>Products</li>
+          <hr>
+        </div>
+  
+        <div>
+          <li>Support</li>
+          <hr>
+        </div>
+      </ul>
+      <p class="footer__rights">© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+    
   </footer>
 
 
