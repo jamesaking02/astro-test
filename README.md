@@ -26,7 +26,7 @@ Users should be able to:
 
 ![desktop screenshot](./public/images/desktop-screenshot-loopstudios-landing-page.png)
 ![mobile screenshot](./public/images/mobile-screenshot-loopstudios-landing-page.png)
-
+![mobile screenshot2](./public/images/mobile-screenshot-loopstudios-landing-page3.png)
 
 
 ### Links
