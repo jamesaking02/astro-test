@@ -23,6 +23,8 @@
     rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
+/* GENERAL STYLES */
+
 *,
 ::after,
 ::before {
@@ -73,8 +75,9 @@ picture {
 picture > img {
   width: 100%;
 }
-
-.header-container > a > .logo,
+/* END OF GENERAL STYLES */
+/* HEADER/NAV STYLES */
+.nav-logo,
 .nav-button {
   position: relative;
   z-index: 2;
@@ -99,11 +102,13 @@ picture > img {
   transition: background-color 1s ease;
 }
 
+
 .logo {
-  transition: scale, opacity .5s ease-in-out;
+  transition: scale .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
-.logo:hover {
+img.logo:hover {
   scale: 0.95;
   opacity: 0.7;
 }
@@ -159,7 +164,8 @@ hr {
   transition: scale .5s ease;
   visibility: visible;
 }
-
+/* END OF HEADER/NAV STYLES */
+/* HOME STYLES */
 #home {
   overflow: hidden;
 }
@@ -181,7 +187,8 @@ hr {
   transition: font-size 0s ease-in-out;
   word-spacing: .2rem;
 }
-
+/* END OF HOME STYLES */
+/* ABOUT STYLES */
 #about {
   padding: 6rem 1.5rem;
   text-align: center;
@@ -197,7 +204,8 @@ hr {
   font-size: clamp(1rem, 1vw, 1.06rem);
   line-height: 1.5;
 }
-
+/* END OF ABOUT STYLES */
+/* BUTTON STYLES */
 button.see-all-bttn--lgr-s-sizes {
   display: none;
 }
@@ -220,7 +228,8 @@ button.see-all-bttn--lgr-s-sizes {
   background-color: black;
   color: white;
 }
-
+/* END OF BUTTON STYLES */
+/* FOOTER STYLES */
 footer {
   display: flex;
   flex-direction: column;
@@ -279,7 +288,10 @@ div.social-icons--desktop {
   color: var(--dark-gray);
 }
 
-@media screen and (width >= 768px) {
+/* END OF FOOTER STYLES */
+/* MEDIA QUERIES */
+
+@media screen and (width >= 768px) { /*LARGER SCREEN SIZES*/
   .logo {
     max-width: 16rem;
   }
@@ -337,8 +349,6 @@ div.social-icons--desktop {
     
   }
 
-  
-
   #home > .absolute-content {
     max-width: 50rem;
     top: 18rem;
@@ -352,7 +362,6 @@ div.social-icons--desktop {
   }
 
   #about > picture > img {
-    /* min-width: 40rem; */
     display: block;
   }
 
@@ -395,7 +404,7 @@ div.social-icons--desktop {
 }
 
 
-
+/*TABLET/LAPTOP/S-DESKTOP*/
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .creation > .creation__title {
     scale: 0.85;
@@ -424,6 +433,7 @@ div.social-icons--desktop {
   }
 }
 
+/*LARGER DESKTOP ONLY*/
 @media screen and (min-width: 1440px) {
   #home > .absolute-content > h1 {
     font-size: clamp(4rem, 5vw, 6rem);
@@ -444,7 +454,6 @@ div.social-icons--desktop {
   #about > picture {
     grid-column: 1 / span 8;
     grid-row: 1 / span 4;
-    /* min-width: 100%; */
   }
   
   #about > .about__content {
@@ -511,16 +520,6 @@ div.social-icons--desktop {
   .footer__nav > div > li {
     margin: 0;
   }
-}
-
-
-
-@media screen and (min-width: 768px) and (max-width: 900px) {
-  #events {
-    padding-inline: 2rem;
-  }
-
-
 }
 
 
