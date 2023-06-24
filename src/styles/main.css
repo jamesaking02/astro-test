@@ -237,6 +237,7 @@ footer {
   background-color: black;
   color: white;
   padding-block: 4rem;
+  position: relative;
 }
 
 .footer__nav--desktop {
@@ -287,6 +288,11 @@ div.social-icons--desktop {
 .footer__rights {
   color: var(--dark-gray);
 }
+
+/* .attribution {
+  position: absolute;
+  bottom: .5rem;
+} */
 
 /* END OF FOOTER STYLES */
 /* MEDIA QUERIES */
