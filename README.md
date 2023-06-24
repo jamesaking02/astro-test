@@ -27,10 +27,10 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop screenshot](/main/images/desktop-screenshot-loopstudios-landing-page.png)
-![mobile screenshot](/main/images/mobile-screenshot-loopstudios-landing-page.png)
-![mobile screenshot2](/main/images/mobile-screenshot-loopstudios-landing-page2.png)
-![mobile screenshot3](/main/images/mobile-screenshot-loopstudios-landing-page3.png)
+![desktop screenshot](/loopstudios-landing-page/images/desktop-screenshot-loopstudios-landing-page.png)
+![mobile screenshot](/loopstudios-landing-page/images/mobile-screenshot-loopstudios-landing-page.png)
+![mobile screenshot2](/loopstudios-landing-page/images/mobile-screenshot-loopstudios-landing-page2.png)
+![mobile screenshot3](/loopstudios-landing-page/images/mobile-screenshot-loopstudios-landing-page3.png)
 
 
 ### Links
