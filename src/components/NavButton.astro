@@ -1,24 +1,60 @@
 <script>
   const navBttn = document.querySelector(".nav-button")
+  const nav = document.querySelector("nav")
+  const navBttnLines = document.querySelectorAll(".line")
+  const body = document.querySelector("body")
   navBttn.addEventListener('click', () => {
-    const navBttnLines = document.querySelectorAll(".line")
-    const nav = document.querySelector("nav")
+    
+    
     navBttnLines.forEach((line) => {
       line.classList.toggle("active")
     })
 
     nav.classList.toggle("active")
-    document.querySelector("body").classList.toggle("active")
+    body.classList.toggle("active")
 
     //animate nav items when menu animation is done
     nav.addEventListener('transitionrun', () => {
       document.querySelector("ul").classList.add("animated")
+      
     })
     document.querySelector("ul").classList.remove("animated")
+
+    
   })
 
-  
-  
+
+
+  // Close the nav menu when clicking on a nav item
+  const navItem = document.querySelectorAll(".nav-item")
+  navItem.forEach((item) => {
+    item.addEventListener("click", () => {
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active")
+        body.classList.remove("active")
+
+        navBttnLines.forEach((line) => {
+          line.classList.remove("active")
+        })
+
+      }
+    })
+  })
+
+  // Clicking nav logo closes menu
+  const navLogo = document.querySelector(".nav-logo")
+  navLogo.addEventListener('click', () => {
+    if (nav.classList.contains("active")) {
+        nav.classList.remove("active")
+        body.classList.remove("active")
+
+        navBttnLines.forEach((line) => {
+          line.classList.remove("active")
+        })
+
+      }
+  }) 
+
 </script>
 
 <button class="nav-button">
